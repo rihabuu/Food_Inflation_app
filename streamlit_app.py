@@ -11,7 +11,7 @@ data = pd.read_csv("food_inflation.csv")
 
 st.title('Monthly Food Price Inflation Estimates by Country')
 st.write('Explore the trends, comparisons, and impacts of food price inflation across countries.')
-
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # viz1:
 st.write('Let\'s take a look at the monthly Inflation by Country')
