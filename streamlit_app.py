@@ -13,10 +13,8 @@ st.title('Monthly Food Price Inflation Estimates by Country')
 st.write('Explore the trends, comparisons, and impacts of food price inflation across countries.')
 
 # Date range filter
-data['date'] = pd.to_datetime(data['date'])
-min_date = data['date'].min()
-start_date = st.sidebar.date_input('Start date', data['date'].min().date())
-end_date = st.sidebar.date_input('End date', data['date'].max().date())
+date_range = st.sidebar.date_input('Date range', [data['date'].min().date(), data['date'].max().date()])
+start_date, end_date = date_range
 filtered_data = data[(data['date'] >= start_date) & (data['date'] <= end_date)]
 if filtered_data.empty:
     st.write("No data available for the selected date range.")
