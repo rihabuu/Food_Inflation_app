@@ -28,7 +28,7 @@ st.plotly_chart(fig)
 
 # viz3:
 st.write('Let\'s take a look at the monthly food price Inflation by country for the Latest Month')
-latest_month_data = data[filtered_data['date'] == data['date'].max()]
+latest_month_data = data[data['date'] == data['date'].max()]
 fig = px.choropleth(latest_month_data,
                     locations="country",
                     locationmode='country names',
