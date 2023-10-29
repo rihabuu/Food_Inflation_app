@@ -8,7 +8,6 @@ from bokeh.plotting import figure
 from bokeh.models import ColumnDataSource
 
 data = pd.read_csv("food_inflation.csv")
-st.write(data.head())
 
 st.title('Monthly Food Price Inflation Estimates by Country')
 st.write('Explore the trends, comparisons, and impacts of food price inflation across countries.')
