@@ -7,7 +7,7 @@ import altair as alt
 from bokeh.plotting import figure
 from bokeh.models import ColumnDataSource
 
-data = pd.read_csv("data_FI.csv")
+data = pd.read_csv("food_inflation.csv")
 st.write(data.head())
 
 st.title('Monthly Food Price Inflation Estimates by Country')
