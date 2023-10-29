@@ -59,7 +59,7 @@ else:
         st.write("No data available for the selected countries.")
     else:
         fig = px.bar(country_comparison_data, x='date', y='Inflation', color='country', barmode='group', title='Comparative Monthly Food Price Inflation')
-        st.plotly_chart(fig)
+st.plotly_chart(fig)
 
 # viz6:
 st.write('Let\'s take a look at the  Food Price Volatility Over Time for Selected Countries')
