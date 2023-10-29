@@ -54,7 +54,7 @@ countries = st.sidebar.multiselect("Select countries to compare:", data['country
 if not countries: 
     st.write("Please select at least one country to visualize.")
 else:
-    country_comparison_data = data[filtered_data['country'].isin(countries)]
+    country_comparison_data = data[data['country'].isin(countries)]
     if country_comparison_data.empty:
         st.write("No data available for the selected countries.")
     else:
