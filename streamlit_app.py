@@ -85,5 +85,4 @@ else:
             st.plotly_chart(fig)
 
 st.caption('ZOUITINA Rihab')
-# Invalidate cache for Streamlit Cloud deployment
 
