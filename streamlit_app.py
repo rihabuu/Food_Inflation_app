@@ -15,7 +15,7 @@ st.write('Explore the trends, comparisons, and impacts of food price inflation a
 
 # viz1:
 st.write('Let\'s take a look at the monthly Inflation by Country')
-pivot_table = data.pivot('country', 'date', 'Inflation')
+pivot_table = data.pivot(index='country', columns='date', values='Inflation')
 plt.figure(figsize=(12, 8))
 sns.heatmap(pivot_table, cmap="YlGnBu")
 st.pyplot()
