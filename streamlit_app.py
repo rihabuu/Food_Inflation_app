@@ -62,11 +62,11 @@ else:
         st.plotly_chart(fig)
 
 # viz6:
-    st.write('Let\'s take a look at the  Food Price Volatility Over Time for Selected Countries')
-    countries_volatility = st.multiselect("Select countries to view volatility:", data['country'].unique())
+st.write('Let\'s take a look at the  Food Price Volatility Over Time for Selected Countries')
+countries_volatility = st.multiselect("Select countries to view volatility:", data['country'].unique())
 
 if not countries_volatility:
-    st.write("Please select at least one country to view volatility.")
+  st.write("Please select at least one country to view volatility.")
 else:
     volatility_data = data[data['country'].isin(countries_volatility)]
     if volatility_data.empty:  
