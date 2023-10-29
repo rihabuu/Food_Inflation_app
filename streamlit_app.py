@@ -14,6 +14,8 @@ st.title('Monthly Food Price Inflation Estimates by Country')
 st.write('Explore the trends, comparisons, and impacts of food price inflation across countries.')
 
 # Date range filter
+data['date'] = pd.to_datetime(data['date'])
+min_date = data['date'].min()
 start_date = st.sidebar.date_input('Start date', data['date'].min())
 end_date = st.sidebar.date_input('End date', data['date'].max())
 filtered_data = data[(data['date'] >= start_date) & (data['date'] <= end_date)]
