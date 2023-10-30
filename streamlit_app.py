@@ -49,7 +49,7 @@ st.plotly_chart(fig)
 
 # viz5:
 st.write('Let\'s take a look at the Monthly Food Price Inflation for Selected Countries')
-countries = st.sidebar.multiselect("Select countries to compare:", data['country'].unique())
+countries = st.multiselect("Select countries to compare:", data['country'].unique())
 
 if not countries: 
     st.write("Please select at least one country to visualize.")
